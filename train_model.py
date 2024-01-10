@@ -1,0 +1,11 @@
+# train_model.py
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+import joblib
+
+# ... (load and preprocess data)
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Save the trained model
+joblib.dump(model, 'your_model_path.joblib')
